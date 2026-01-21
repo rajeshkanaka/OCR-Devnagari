@@ -1,54 +1,74 @@
 <div align="center">
 
+<!-- Animated Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=OCR-Devnagari&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=32&desc=Digitizing%20Sacred%20Wisdom,%20One%20Page%20at%20a%20Time&descAlignY=52&descSize=18" width="100%"/>
+
 <!-- Divine Invocation -->
 <sub>॥ श्री गणेशाय नमः ॥</sub>
 
-<br>
+<br><br>
 
-<!-- Logo -->
-<img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Scroll/3D/scroll_3d.png" width="140" alt="Sacred Scroll"/>
-
-<br>
-
-<!-- Title with Devanagari flair -->
-# OCR-Devnagari (Sanskrit, Marathi and Hindi)
-
-### *Digitizing Sacred Wisdom, One Page at a Time*
+<!-- Animated Typing Effect -->
+<a href="https://github.com/rajeshkanaka/OCR-Devnagari">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=80&lines=Production-Grade+OCR+for+Ancient+Manuscripts;Hindi+%E2%80%A2+Sanskrit+%E2%80%A2+Devanagari" alt="Typing SVG" />
+</a>
 
 <br>
 
-**Production-grade OCR for Hindi, Sanskrit & Devanagari manuscripts**<br>
-*Intelligent hybrid processing • Crash-safe architecture • 90% cost savings*
+<!-- Hero Stats -->
+<p>
+  <img src="https://img.shields.io/badge/💰_Save-Up_to_90%25_Cost-FF6B35?style=for-the-badge&labelColor=1a1a2e" alt="Cost Savings"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/🛡️_Crash-Safe_Resume-00C853?style=for-the-badge&labelColor=1a1a2e" alt="Crash Safe"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/🕉️_Mantra-Detection-9C27B0?style=for-the-badge&labelColor=1a1a2e" alt="Mantra Detection"/>
+</p>
 
 <br>
 
-<!-- Primary Action Badges -->
-[<img src="https://img.shields.io/badge/⚡_Quick_Start-2_Minutes-00C853?style=for-the-badge" alt="Quick Start"/>](#-quick-start)
-&nbsp;
-[<img src="https://img.shields.io/badge/💰_Save-Up_to_90%25-FF6B35?style=for-the-badge" alt="Cost Savings"/>](#-cost-comparison)
-&nbsp;
-[<img src="https://img.shields.io/badge/📖_Documentation-View_Docs-0288D1?style=for-the-badge" alt="Documentation"/>](#-architecture)
+<!-- Primary Action Buttons -->
+<p>
+  <a href="#-quick-start">
+    <img src="https://img.shields.io/badge/⚡_GET_STARTED-2_Minutes-00C853?style=for-the-badge&logo=rocket&logoColor=white" alt="Quick Start"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="#-architecture">
+    <img src="https://img.shields.io/badge/📖_VIEW_DOCS-Documentation-0288D1?style=for-the-badge&logo=gitbook&logoColor=white" alt="Documentation"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/rajeshkanaka/OCR-Devnagari/stargazers">
+    <img src="https://img.shields.io/badge/⭐_STAR_THIS-Repository-FFD700?style=for-the-badge&logo=github&logoColor=black" alt="Star"/>
+  </a>
+</p>
 
 <br>
 
-<!-- Tech Stack Badges -->
-<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Gemini_3-Flash_Preview-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
-&nbsp;
-<img src="https://img.shields.io/badge/EasyOCR-Built_In-00C853?style=flat-square&logo=opencv&logoColor=white" alt="EasyOCR"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Architecture-Crash_Safe-9C27B0?style=flat-square&logo=shield&logoColor=white" alt="Crash Safe"/>
-&nbsp;
-<img src="https://img.shields.io/badge/License-MIT-F9A825?style=flat-square" alt="License"/>
+<!-- Tech Badges Row -->
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Gemini_2.0-Flash-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/EasyOCR-Built_In-00C853?style=flat-square&logo=opencv&logoColor=white" alt="EasyOCR"/>
+  <img src="https://img.shields.io/badge/UV-Package_Manager-DE5FE9?style=flat-square&logo=astral&logoColor=white" alt="UV"/>
+  <img src="https://img.shields.io/badge/License-MIT-F9A825?style=flat-square" alt="License"/>
+</p>
+
+<!-- GitHub Stats -->
+<p>
+  <img src="https://img.shields.io/github/stars/rajeshkanaka/OCR-Devnagari?style=social" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/rajeshkanaka/OCR-Devnagari?style=social" alt="Forks"/>
+  <img src="https://img.shields.io/github/watchers/rajeshkanaka/OCR-Devnagari?style=social" alt="Watchers"/>
+</p>
 
 <br>
-<br>
 
-<!-- Animated Demo Placeholder -->
-<img src="https://user-images.githubusercontent.com/placeholder/ocr-hindi-demo.gif" width="750" alt="OCR Hindi in Action"/>
+<!-- Demo Screenshot/GIF Placeholder -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rajeshkanaka/OCR-Devnagari/main/.github/demo-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rajeshkanaka/OCR-Devnagari/main/.github/demo-light.png">
+  <img alt="OCR-Devnagari Demo" src="https://placehold.co/800x400/1a1a2e/FF6B35?text=🕉️+OCR-Devnagari+Demo&font=montserrat" width="80%">
+</picture>
 
-<sub>*Processing a 1000-page tantric manuscript with crash-safe resume capability*</sub>
+<sub><i>Processing a 1000-page tantric manuscript with crash-safe resume capability</i></sub>
 
 </div>
 
@@ -58,47 +78,73 @@
 
 <br>
 
-## 🪔 Why OCR Hindi?
+## 🌟 Why OCR-Devnagari?
 
 <table>
 <tr>
-<td width="60%">
+<td width="50%">
 
-### The Problem
+### 😫 The Problem
 
-Ancient Sanskrit and Hindi manuscripts—tantras, stotras, and sacred texts—are being lost to time. Existing OCR tools either:
+Ancient Sanskrit and Hindi manuscripts—**tantras**, **stotras**, and **sacred texts**—are being lost to time. Existing OCR tools:
 
-- ❌ **Can't handle Devanagari** complex conjuncts (संयुक्ताक्षर)
-- ❌ **Destroy mantras** like ॐ ह्रीं श्रीं क्लीं
-- ❌ **Cost a fortune** for large manuscripts
-- ❌ **Crash and lose work** on long documents
-
-### The Solution
-
-OCR Hindi combines the **speed of local OCR** with the **accuracy of Gemini AI**, using intelligent routing to achieve **90% cost savings** while preserving every sacred syllable.
+| Issue | Impact |
+|:------|:-------|
+| ❌ Can't handle complex conjuncts | संयुक्ताक्षर destroyed |
+| ❌ Destroys mantras | ॐ ह्रीं श्रीं corrupted |
+| ❌ Costs a fortune | $10+ per manuscript |
+| ❌ Crashes lose work | Hours of progress gone |
 
 </td>
-<td width="40%" align="center">
+<td width="50%">
+
+### 🎯 The Solution
+
+OCR-Devnagari combines **local OCR speed** with **Gemini AI accuracy**:
 
 ```
-┌─────────────────────────┐
-│                         │
-│   📜 1000-page Tantra   │
-│                         │
-│   Before: $10+ cost     │
-│   After:  $1 cost       │
-│                         │
-│   ✨ 90% Savings ✨     │
-│                         │
-│   Zero data loss on     │
-│   crash or interrupt    │
-│                         │
-└─────────────────────────┘
+┌─────────────────────────────┐
+│                             │
+│   📜 1000-page Manuscript   │
+│                             │
+│   Before: $10+ cost         │
+│   After:  $1 cost           │
+│                             │
+│   ✨ 90% Savings ✨          │
+│                             │
+│   Zero data loss on         │
+│   crash or interrupt        │
+│                             │
+└─────────────────────────────┘
 ```
 
 </td>
 </tr>
 </table>
+
+<br>
+
+---
+
+<br>
+
+## ✨ Features
+
+<div align="center">
+
+|  | Feature | Description |
+|:---:|:---|:---|
+| 🔀 | **Multi-Engine Support** | 5 OCR backends to choose from |
+| 🧠 | **Smart Hybrid Mode** | EasyOCR + Gemini for optimal results |
+| 🕉️ | **Mantra Detection** | Auto-detect and preserve sacred text |
+| ⚡ | **High Performance** | Async concurrent workers |
+| 💾 | **Crash-Safe** | Resume from any interruption |
+| 📊 | **Live Progress** | Real-time tracking with ETA |
+| 🛡️ | **Graceful Shutdown** | Ctrl+C saves all work |
+| 🧹 | **Memory Efficient** | Handles 1000+ page PDFs |
+| ✅ | **Response Validation** | Rejects invalid OCR results |
+
+</div>
 
 <br>
 
@@ -108,41 +154,40 @@ OCR Hindi combines the **speed of local OCR** with the **accuracy of Gemini AI**
 
 ## ⚡ Quick Start
 
-<table>
-<tr>
-<td>
-
-### 1️⃣ &nbsp; Clone & Install
+<details open>
+<summary><h3>📦 Installation</h3></summary>
 
 ```bash
+# Clone the repository
 git clone https://github.com/rajeshkanaka/OCR-Devnagari.git
 cd OCR-Devnagari
+
+# Install with UV (recommended)
 uv sync && uv pip install easyocr
+
+# Or with pip
+pip install -r requirements.txt && pip install easyocr
 ```
 
-</td>
-</tr>
-<tr>
-<td>
+</details>
 
-### 2️⃣ &nbsp; Configure API *(for Gemini features)*
+<details>
+<summary><h3>🔑 Configure API (for Gemini features)</h3></summary>
 
 ```bash
-# Option A: Vertex AI (Recommended)
+# Option A: Vertex AI (Recommended for production)
 export GOOGLE_CLOUD_PROJECT="your-project"
 export GOOGLE_CLOUD_LOCATION="global"
 export GOOGLE_GENAI_USE_VERTEXAI=1
 
-# Option B: API Key
+# Option B: API Key (Quick setup)
 export GEMINI_API_KEY="your-key"
 ```
 
-</td>
-</tr>
-<tr>
-<td>
+</details>
 
-### 3️⃣ &nbsp; Run!
+<details open>
+<summary><h3>🚀 Run!</h3></summary>
 
 ```bash
 # 🔥 Hybrid mode — 90% savings, maximum accuracy
@@ -150,32 +195,12 @@ python -m ocr_hindi ocr manuscript.pdf --pages "all"
 
 # 🆓 100% FREE local processing
 python -m ocr_hindi ocr manuscript.pdf -e easyocr
+
+# 💎 Premium Gemini mode for critical documents
+python -m ocr_hindi ocr manuscript.pdf -e gemini
 ```
 
-</td>
-</tr>
-</table>
-
-<br>
-
----
-
-<br>
-
-## 💎 Features at a Glance
-
-<div align="center">
-
-|  |  |  |
-|:---:|:---:|:---:|
-| **🔀 Multi-Engine** | **🧠 Smart Hybrid** | **🕉️ Mantra Detection** |
-| 5 OCR backends to choose from | EasyOCR + Gemini when needed | Auto-detect sacred text |
-| **⚡ High Performance** | **💾 Crash-Safe** | **📊 Live Progress** |
-| Async concurrent workers | Resume from any interruption | Real-time with ETA |
-| **🛡️ Graceful Shutdown** | **🧹 Memory Efficient** | **✅ Response Validation** |
-| Ctrl+C saves all work | Handles 1000+ page PDFs | Rejects invalid results |
-
-</div>
+</details>
 
 <br>
 
@@ -187,48 +212,48 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 
 <div align="center">
 
-### *How much can you save?*
-
-</div>
-
-<br>
+### 💸 How much can you save?
 
 <table>
 <tr>
-<th width="50%" align="center">
+<th width="45%">
 
-### ❌ &nbsp; Traditional Approach
+### ❌ Traditional Approach
 
 </th>
-<th width="50%" align="center">
+<th width="10%"></th>
+<th width="45%">
 
-### ✅ &nbsp; With OCR Hindi
+### ✅ With OCR-Devnagari
 
 </th>
 </tr>
 <tr>
 <td align="center">
 
-```
-📄 1000-page Manuscript
-
-💸 Cost:     ~$10-15
-🔄 API Calls: 1000
-⏱️ Time:     ~45 min
-🛡️ Crash:    LOSE EVERYTHING
-```
+| Metric | Value |
+|:------:|:-----:|
+| 📄 Pages | 1000 |
+| 💸 Cost | ~$10-15 |
+| 🔄 API Calls | 1000 |
+| ⏱️ Time | ~45 min |
+| 🛡️ On Crash | **LOSE ALL** |
 
 </td>
 <td align="center">
 
-```
-📄 1000-page Manuscript
+### →
 
-💸 Cost:     ~$1-2 (90% less!)
-🔄 API Calls: ~100-150 (mantras only)
-⏱️ Time:     ~90 min
-🛡️ Crash:    Resume instantly ✓
-```
+</td>
+<td align="center">
+
+| Metric | Value |
+|:------:|:-----:|
+| 📄 Pages | 1000 |
+| 💸 Cost | **~$1-2** |
+| 🔄 API Calls | ~100-150 |
+| ⏱️ Time | ~90 min |
+| 🛡️ On Crash | **Resume ✓** |
 
 </td>
 </tr>
@@ -236,25 +261,15 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 
 <br>
 
-<div align="center">
-
-### Engine Comparison
+### 🏆 Engine Comparison
 
 | Engine | Cost | Accuracy | Speed | Best For |
 |:------:|:----:|:--------:|:-----:|:---------|
-| 🔀 **hybrid** | ~$0.30/1K | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | **Recommended** — Optimal balance |
-| 🆓 **easyocr** | FREE | ⭐⭐⭐⭐ | ⚡⚡ | Budget-conscious, good Hindi |
-| 🆓 **marker** | FREE | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | Structured PDFs, books |
+| 🔀 **hybrid** | ~$0.30/1K | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | **Recommended** |
+| 🆓 **easyocr** | FREE | ⭐⭐⭐⭐ | ⚡⚡ | Budget-conscious |
+| 🆓 **marker** | FREE | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | Structured PDFs |
 | 🆓 **tesseract** | FREE | ⭐⭐⭐ | ⚡⚡⚡⚡ | Simple documents |
-| 💎 **gemini** | ~$2/1K | ⭐⭐⭐⭐⭐ | ⚡⚡⚡⚡ | Critical accuracy needed |
-
-<br>
-
-<sub>
-
-**Gemini 3 Flash Pricing:** Input $0.50/1M tokens • Output $3.00/1M tokens
-
-</sub>
+| 💎 **gemini** | ~$2/1K | ⭐⭐⭐⭐⭐ | ⚡⚡⚡⚡ | Critical accuracy |
 
 </div>
 
@@ -271,8 +286,6 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 > *"Write once, crash anywhere, resume everywhere"*
 
 </div>
-
-<br>
 
 ```
                               ┌─────────────────────────────────────────┐
@@ -300,7 +313,7 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 │    │                                    │                          │          │    │
 │    │                                    ▼                          ▼          │    │
 │    │                           ┌───────────────────────────────────────┐      │    │
-│    │                           │        💎 Gemini 3 Flash             │      │    │
+│    │                           │        💎 Gemini 2.0 Flash           │      │    │
 │    │                           │   • thinking_level: "low"            │      │    │
 │    │                           │   • media_resolution: "high"         │      │    │
 │    │                           │   • Token tracking for cost          │      │    │
@@ -314,19 +327,11 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 │                              🛡️ CRASH-SAFE PIPELINE                                 │
 ├─────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                     │
-│    For each page:                                                                   │
-│                                                                                     │
 │    ┌──────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐    │
 │    │   OCR    │────▶│    Cache     │────▶│   Progress   │────▶│   Release    │    │
 │    │ Process  │     │ Atomic Write │     │   Update     │     │   Memory     │    │
-│    └──────────┘     │ page_NNN.txt │     └──────────────┘     │ gc.collect() │    │
-│                     └──────────────┘                          └──────────────┘    │
-│                            │                                                        │
-│                            ▼                                                        │
-│                   .ocr_cache_{pdf}/                                                 │
-│                   ├── page_0001.txt  ◀── Survives crash!                           │
-│                   ├── page_0002.txt                                                 │
-│                   └── ...                                                           │
+│    └──────────┘     │ page_NNN.txt │     └──────────────┘     └──────────────┘    │
+│                     └──────────────┘                                               │
 │                                                                                     │
 │    On interrupt (Ctrl+C) or crash:                                                 │
 │    ┌─────────────────────────────────────────────────────────────────────────┐    │
@@ -341,8 +346,6 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
                               │   📝 Markdown Output + 💰 Cost Report   │
                               └─────────────────────────────────────────┘
 ```
-
-<br>
 
 <div align="center">
 
@@ -366,12 +369,12 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 
 <br>
 
-<table>
+<table align="center">
 <tr>
-<td width="25%" align="center">
+<td align="center" width="25%">
 
 **बीज मन्त्र**<br>
-*Seed Syllables*
+<sub>Seed Syllables</sub>
 
 ```
 ॐ    ह्रीं   श्रीं
@@ -379,10 +382,10 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 ```
 
 </td>
-<td width="25%" align="center">
+<td align="center" width="25%">
 
 **मन्त्र समाप्ति**<br>
-*Sacred Endings*
+<sub>Sacred Endings</sub>
 
 ```
 स्वाहा   नमः   फट्
@@ -390,10 +393,10 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 ```
 
 </td>
-<td width="25%" align="center">
+<td align="center" width="25%">
 
 **श्लोक चिह्न**<br>
-*Verse Markers*
+<sub>Verse Markers</sub>
 
 ```
 ॥१॥  ॥२॥  ॥३॥
@@ -401,10 +404,10 @@ python -m ocr_hindi ocr manuscript.pdf -e easyocr
 ```
 
 </td>
-<td width="25%" align="center">
+<td align="center" width="25%">
 
 **विभाग सूचक**<br>
-*Section Indicators*
+<sub>Section Indicators</sub>
 
 ```
 विनियोग  न्यास
@@ -525,17 +528,17 @@ python -m ocr_hindi ocr manuscript.pdf --resume
 
 <br>
 
-## 📁 Output Files
+## 📁 Output Structure
 
 ```
 your_manuscript/
-├── manuscript.pdf                        # Original file
-├── manuscript_unicode.md                 # ✨ Final output (Devanagari text)
-├── ocr_manuscript_20240120_143022.log    # Processing log
-├── .ocr_progress_manuscript.json         # Resume state
-└── .ocr_cache_manuscript/                # 🛡️ Crash-safe cache
-    ├── page_0001.txt                     #    Individual page cache
-    ├── page_0001.meta.json               #    Page metadata
+├── 📄 manuscript.pdf                        # Original file
+├── 📝 manuscript_unicode.md                 # ✨ Final output (Devanagari text)
+├── 📋 ocr_manuscript_20240120_143022.log    # Processing log
+├── 📊 .ocr_progress_manuscript.json         # Resume state
+└── 📂 .ocr_cache_manuscript/                # 🛡️ Crash-safe cache
+    ├── page_0001.txt                        #    Individual page cache
+    ├── page_0001.meta.json                  #    Page metadata
     ├── page_0002.txt
     └── ...
 ```
@@ -546,7 +549,7 @@ your_manuscript/
 
 <br>
 
-## 📊 Performance
+## 📊 Performance Benchmarks
 
 <div align="center">
 
@@ -570,7 +573,7 @@ your_manuscript/
 ## 🔧 Troubleshooting
 
 <details>
-<summary><b>❌ &nbsp; "poppler not found"</b></summary>
+<summary><b>❌ "poppler not found"</b></summary>
 
 ```bash
 # macOS
@@ -579,14 +582,14 @@ brew install poppler
 # Ubuntu/Debian
 sudo apt-get install poppler-utils
 
-# Windows
-# Download from: https://github.com/oschwartz10612/poppler-windows/releases
+# Windows - Download from:
+# https://github.com/oschwartz10612/poppler-windows/releases
 ```
 
 </details>
 
 <details>
-<summary><b>❌ &nbsp; "EasyOCR not installed"</b></summary>
+<summary><b>❌ "EasyOCR not installed"</b></summary>
 
 ```bash
 uv pip install easyocr
@@ -597,7 +600,7 @@ pip install easyocr
 </details>
 
 <details>
-<summary><b>❌ &nbsp; "Tesseract not installed"</b></summary>
+<summary><b>❌ "Tesseract not installed"</b></summary>
 
 ```bash
 # macOS
@@ -606,14 +609,14 @@ brew install tesseract tesseract-lang
 # Ubuntu/Debian
 sudo apt install tesseract-ocr tesseract-ocr-hin tesseract-ocr-san
 
-# Windows
-# Download installer from: https://github.com/UB-Mannheim/tesseract/wiki
+# Windows - Download installer from:
+# https://github.com/UB-Mannheim/tesseract/wiki
 ```
 
 </details>
 
 <details>
-<summary><b>❌ &nbsp; Authentication errors</b></summary>
+<summary><b>❌ Authentication errors</b></summary>
 
 ```bash
 # Verify Vertex AI setup
@@ -630,20 +633,19 @@ python -m ocr_hindi validate
 </details>
 
 <details>
-<summary><b>❌ &nbsp; Rate limiting (429 errors)</b></summary>
+<summary><b>❌ Rate limiting (429 errors)</b></summary>
 
 ```bash
 # Reduce concurrent workers
 python -m ocr_hindi ocr book.pdf --workers 3
 
 # The system will automatically retry with exponential backoff
-# If persistent, wait a few minutes before retrying
 ```
 
 </details>
 
 <details>
-<summary><b>❌ &nbsp; High memory usage</b></summary>
+<summary><b>❌ High memory usage</b></summary>
 
 ```bash
 # Reduce workers (each worker holds images in memory)
@@ -666,19 +668,40 @@ python -m ocr_hindi ocr book.pdf --pages "101-200" --resume
 
 <div align="center">
 
-*Contributions are what make the open source community amazing!*
+**Contributions are what make the open source community amazing!**
 
 </div>
 
 <br>
 
-We welcome contributions of all kinds:
+<table align="center">
+<tr>
+<td align="center">
 
-- 🐛 **Bug Reports** — Found a bug? [Open an issue](https://github.com/rajeshkanaka/OCR-Devnagari/issues)
-- 💡 **Feature Requests** — Have an idea? [Start a discussion](https://github.com/rajeshkanaka/OCR-Devnagari/discussions)
-- 🔧 **Pull Requests** — Ready to code? Fork and submit a PR
-- 📖 **Documentation** — Help improve our docs
-- 🌍 **Translations** — Help us reach more users
+🐛 **Bug Reports**<br>
+[Open an Issue](https://github.com/rajeshkanaka/OCR-Devnagari/issues)
+
+</td>
+<td align="center">
+
+💡 **Feature Ideas**<br>
+[Start a Discussion](https://github.com/rajeshkanaka/OCR-Devnagari/discussions)
+
+</td>
+<td align="center">
+
+🔧 **Pull Requests**<br>
+Fork & Submit PR
+
+</td>
+<td align="center">
+
+📖 **Documentation**<br>
+Help improve docs
+
+</td>
+</tr>
+</table>
 
 <br>
 
@@ -717,19 +740,31 @@ See [LICENSE](LICENSE) for details
 
 <br>
 
-<div align="center">
-
 ## 🙏 Acknowledgments
+
+<div align="center">
 
 *This project stands on the shoulders of giants*
 
 <br>
 
-[Google Gemini](https://deepmind.google/technologies/gemini/) •
-[EasyOCR](https://github.com/JaidedAI/EasyOCR) •
-[Tesseract](https://github.com/tesseract-ocr/tesseract) •
-[Marker](https://github.com/VikParuchuri/marker) •
-[pdf2image](https://github.com/Belval/pdf2image)
+<a href="https://deepmind.google/technologies/gemini/">
+  <img src="https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"/>
+</a>
+&nbsp;
+<a href="https://github.com/JaidedAI/EasyOCR">
+  <img src="https://img.shields.io/badge/JaidedAI-EasyOCR-00C853?style=for-the-badge&logo=opencv&logoColor=white" alt="EasyOCR"/>
+</a>
+&nbsp;
+<a href="https://github.com/tesseract-ocr/tesseract">
+  <img src="https://img.shields.io/badge/Tesseract-OCR-FF6B35?style=for-the-badge&logo=google&logoColor=white" alt="Tesseract"/>
+</a>
+&nbsp;
+<a href="https://github.com/VikParuchuri/marker">
+  <img src="https://img.shields.io/badge/VikParuchuri-Marker-9C27B0?style=for-the-badge&logo=markdown&logoColor=white" alt="Marker"/>
+</a>
+
+</div>
 
 <br>
 
@@ -737,32 +772,30 @@ See [LICENSE](LICENSE) for details
 
 <br>
 
-<sub>
+<div align="center">
 
-*Dedicated to the preservation of sacred wisdom*
-
-*May this tool help digitize and preserve ancient manuscripts for generations to come*
-
-</sub>
-
-<br>
-
+<!-- Sanskrit Blessing -->
 ### ॥ सर्वे भवन्तु सुखिनः ॥
 
 *May all beings be happy*
 
 <br>
 
-<img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Om/3D/om_3d.png" width="60" alt="Om"/>
+<img src="https://img.shields.io/badge/🕉️-OM-FF6B35?style=for-the-badge&labelColor=1a1a2e" alt="Om"/>
 
-<br>
-
-<sub>
+<br><br>
 
 **Built with ❤️ for the Sanskrit & Hindu community**
 
-[⭐ Star this repo](https://github.com/rajeshkanaka/OCR-Devnagari) if you find it useful!
+<br>
 
-</sub>
+<a href="https://github.com/rajeshkanaka/OCR-Devnagari">
+  <img src="https://img.shields.io/badge/⭐_If_helpful,_please_star_this_repo!-FFD700?style=for-the-badge&logo=github&logoColor=black" alt="Star"/>
+</a>
+
+<br><br>
+
+<!-- Footer Wave -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
 </div>
