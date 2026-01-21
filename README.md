@@ -46,7 +46,7 @@
 <!-- Tech Badges Row -->
 <p>
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Gemini_2.0-Flash-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/Gemini_3.0-Flash-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
   <img src="https://img.shields.io/badge/EasyOCR-Built_In-00C853?style=flat-square&logo=opencv&logoColor=white" alt="EasyOCR"/>
   <img src="https://img.shields.io/badge/UV-Package_Manager-DE5FE9?style=flat-square&logo=astral&logoColor=white" alt="UV"/>
   <img src="https://img.shields.io/badge/License-MIT-F9A825?style=flat-square" alt="License"/>
