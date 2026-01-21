@@ -1,0 +1,24 @@
+# Core dependencies
+google-genai>=1.0.0
+pdf2image>=1.16.0
+python-dotenv>=1.0.0
+typer>=0.9.0
+rich>=13.0.0
+pillow>=10.0.0
+streamlit>=1.28.0
+termcolor
+
+# FREE OCR backends (install based on your preference)
+# For hybrid/easyocr mode (recommended):
+easyocr
+numpy
+
+# For marker mode (excellent for structured documents):
+# pip install marker-pdf
+# marker-pdf
+
+# For tesseract mode:
+pytesseract
+# Also install tesseract system package:
+# macOS: brew install tesseract tesseract-lang
+# Ubuntu: apt install tesseract-ocr tesseract-ocr-hin tesseract-ocr-san

@@ -1,0 +1,126 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ocr-devnagari"
+version = "0.1.0"
+description = "Production-grade OCR for Hindi, Sanskrit & Devanagari manuscripts with intelligent hybrid processing and crash-safe architecture"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Rajesh Kanaka", email = "rajeshkanaka@gmail.com" }
+]
+keywords = [
+    "ocr",
+    "hindi",
+    "sanskrit",
+    "devanagari",
+    "gemini",
+    "pdf",
+    "manuscript",
+    "digitization",
+    "easyocr",
+    "tesseract"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Religion",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Text Processing :: Linguistic",
+    "Natural Language :: Hindi",
+]
+dependencies = [
+    "google-genai>=1.0.0",
+    "pdf2image>=1.16.0",
+    "python-dotenv>=1.0.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pillow>=10.0.0",
+    "termcolor>=2.0.0",
+]
+
+[project.optional-dependencies]
+easyocr = [
+    "easyocr>=1.7.0",
+    "numpy>=1.24.0",
+]
+tesseract = [
+    "pytesseract>=0.3.10",
+]
+marker = [
+    "marker-pdf>=0.2.0",
+]
+streamlit = [
+    "streamlit>=1.28.0",
+]
+all = [
+    "easyocr>=1.7.0",
+    "numpy>=1.24.0",
+    "pytesseract>=0.3.10",
+    "streamlit>=1.28.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+ocr-hindi = "ocr_hindi.cli:app"
+ocr-devnagari = "ocr_hindi.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/rajeshkanaka/OCR-Devnagari"
+Repository = "https://github.com/rajeshkanaka/OCR-Devnagari"
+Issues = "https://github.com/rajeshkanaka/OCR-Devnagari/issues"
+Documentation = "https://github.com/rajeshkanaka/OCR-Devnagari#readme"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/docs",
+    "/README.md",
+    "/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ocr_hindi"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # do not perform function calls in argument defaults
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
