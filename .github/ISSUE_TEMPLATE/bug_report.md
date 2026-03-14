@@ -1,38 +1,63 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+about: Report a bug in OCR inference, training, preprocessing, evaluation, or Devanagari manuscript workflows
+title: "[Bug]: "
+labels: [bug]
+assignees: []
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Summary
+Describe the bug clearly and concisely.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Area affected
+- [ ] Data ingestion / dataset preparation
+- [ ] Image preprocessing
+- [ ] OCR inference / recognition
+- [ ] Training / fine-tuning
+- [ ] Evaluation / metrics
+- [ ] API / service integration
+- [ ] Documentation
+- [ ] Other
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## To reproduce
+Provide exact steps to reproduce the issue.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+1. ...
+2. ...
+3. ...
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Input details
+Please provide as many relevant details as possible:
+- Input type: scanned page / cropped line / word image / manuscript image
+- Script/language: Hindi / Sanskrit / mixed Devanagari / other
+- Image format: PNG / JPEG / TIFF / PDF
+- Image resolution / DPI:
+- Sample count affected:
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Expected behavior
+Describe what you expected to happen.
 
-**Additional context**
-Add any other context about the problem here.
+## Actual behavior
+Describe what actually happened.
+
+## Logs, traceback, or model output
+Paste any relevant logs, stack traces, confidence scores, or OCR output.
+
+```text
+Paste logs here
+```
+
+## Environment
+- OS:
+- Python version:
+- Dependency installation method:
+- GPU/CPU:
+- CUDA/cuDNN version (if applicable):
+- Commit SHA / branch:
+
+## Sample files or screenshots
+If possible, attach sanitized screenshots or a minimal reproducible sample. Do not upload sensitive manuscript data unless you are authorized to share it.
+
+## Additional context
+Add any other context here.
