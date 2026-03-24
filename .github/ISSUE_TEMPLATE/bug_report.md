@@ -1,57 +1,63 @@
 ---
-name: Bug Report
-about: Report a bug to help us improve OCR-Devnagari
-title: "[BUG] "
-labels: bug
-assignees: ''
+name: Bug report
+about: Report a bug in OCR inference, training, preprocessing, evaluation, or Devanagari manuscript workflows
+title: "[Bug]: "
+labels: [bug]
+assignees: []
+
 ---
 
-## Describe the Bug
+## Summary
+Describe the bug clearly and concisely.
 
-A clear description of what the bug is.
+## Area affected
+- [ ] Data ingestion / dataset preparation
+- [ ] Image preprocessing
+- [ ] OCR inference / recognition
+- [ ] Training / fine-tuning
+- [ ] Evaluation / metrics
+- [ ] API / service integration
+- [ ] Documentation
+- [ ] Other
 
-## To Reproduce
+## To reproduce
+Provide exact steps to reproduce the issue.
 
-Steps to reproduce the behavior:
+1. ...
+2. ...
+3. ...
 
-1. Run command: `uv run python -m ocr_hindi ocr ...`
-2. With these options: ...
-3. See error: ...
+## Input details
+Please provide as many relevant details as possible:
+- Input type: scanned page / cropped line / word image / manuscript image
+- Script/language: Hindi / Sanskrit / mixed Devanagari / other
+- Image format: PNG / JPEG / TIFF / PDF
+- Image resolution / DPI:
+- Sample count affected:
 
-## Expected Behavior
+## Expected behavior
+Describe what you expected to happen.
 
-What you expected to happen.
+## Actual behavior
+Describe what actually happened.
 
-## Actual Behavior
+## Logs, traceback, or model output
+Paste any relevant logs, stack traces, confidence scores, or OCR output.
 
-What actually happened. Include error messages and stack traces.
+```text
+Paste logs here
+```
 
 ## Environment
+- OS:
+- Python version:
+- Dependency installation method:
+- GPU/CPU:
+- CUDA/cuDNN version (if applicable):
+- Commit SHA / branch:
 
-- **OS:** [e.g., macOS 14.2, Ubuntu 22.04]
-- **Python version:** [e.g., 3.12.1]
-- **OCR-Devnagari version:** [e.g., 0.1.0]
-- **Engine used:** [e.g., gemini, hybrid, easyocr]
-- **Install method:** [e.g., uv sync, pip install]
+## Sample files or screenshots
+If possible, attach sanitized screenshots or a minimal reproducible sample. Do not upload sensitive manuscript data unless you are authorized to share it.
 
-## PDF Details (if applicable)
-
-- **Page count:**
-- **Language:** [e.g., Hindi, Sanskrit, mixed]
-- **Scan quality:** [e.g., good, poor, mixed]
-- **Contains mantras/shlokas:** [yes/no]
-
-## Logs
-
-<details>
-<summary>Click to expand logs</summary>
-
-```
-Paste relevant log output here
-```
-
-</details>
-
-## Additional Context
-
-Add any other context, screenshots, or sample output here.
+## Additional context
+Add any other context here.

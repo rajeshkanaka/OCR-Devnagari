@@ -1,38 +1,20 @@
 ---
-name: Feature Request
-about: Suggest a feature for OCR-Devnagari
-title: "[FEATURE] "
-labels: enhancement
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
 assignees: ''
+
 ---
 
-## Problem Statement
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-A clear description of the problem this feature would solve.
-Example: "I need to process Tamil manuscripts but only Hindi/Sanskrit is supported..."
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Proposed Solution
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-Describe what you'd like to see implemented.
-
-## Alternatives Considered
-
-Any alternative solutions or workarounds you've considered.
-
-## Use Case
-
-Who would benefit from this feature and how?
-
-- **Target users:** [e.g., researchers, librarians, spiritual practitioners]
-- **Frequency of use:** [e.g., daily, per-project]
-- **Scale:** [e.g., single PDF, thousands of pages]
-
-## Additional Context
-
-Add any mockups, examples, references, or other context here.
-
-## Would You Like to Contribute?
-
-- [ ] I'd be willing to submit a PR for this feature
-- [ ] I can help test this feature
-- [ ] I can provide sample data for testing
+**Additional context**
+Add any other context or screenshots about the feature request here.
