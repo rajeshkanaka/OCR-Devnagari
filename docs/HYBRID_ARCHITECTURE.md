@@ -56,7 +56,7 @@ flowchart TB
 
     subgraph GEMINI["💎 GEMINI VERIFICATION (Paid API)"]
         direction TB
-        GEM["🤖 Gemini 3 Flash<br/>━━━━━━━━━━━━━<br/>gemini-3-flash-preview"]
+        GEM["🤖 Gemini 2.0 Flash<br/>━━━━━━━━━━━━━<br/>gemini-2.0-flash"]
         CONFIG["⚙️ Configuration<br/>━━━━━━━━━━━━━<br/>thinking_level: low<br/>media_resolution: medium"]
     end
 
@@ -294,7 +294,7 @@ def should_verify_with_gemini(text: str) -> bool:
 ```python
 # In hybrid_backend.py
 GeminiBackend(
-    model="gemini-3-flash-preview",
+    model="gemini-2.0-flash",
     thinking_level="low",           # Faster, cheaper
     media_resolution="medium",      # Balanced quality/cost
 )

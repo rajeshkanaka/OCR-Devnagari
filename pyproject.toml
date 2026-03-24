@@ -35,9 +35,12 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Image Recognition",
     "Topic :: Text Processing :: Linguistic",
+    "Topic :: Multimedia :: Graphics :: Capture :: Scanners",
     "Natural Language :: Hindi",
+    "Typing :: Typed",
 ]
 dependencies = [
     "google-genai>=1.0.0",
@@ -46,7 +49,6 @@ dependencies = [
     "typer>=0.9.0",
     "rich>=13.0.0",
     "pillow>=10.0.0",
-    "termcolor>=2.0.0",
 ]
 
 [project.optional-dependencies]
@@ -63,11 +65,17 @@ marker = [
 streamlit = [
     "streamlit>=1.28.0",
 ]
+batch = [
+    "google-cloud-storage>=2.10.0",
+    "google-cloud-aiplatform>=1.38.0",
+]
 all = [
     "easyocr>=1.7.0",
     "numpy>=1.24.0",
     "pytesseract>=0.3.10",
     "streamlit>=1.28.0",
+    "google-cloud-storage>=2.10.0",
+    "google-cloud-aiplatform>=1.38.0",
 ]
 dev = [
     "pytest>=7.0.0",
@@ -80,12 +88,15 @@ dev = [
 [project.scripts]
 ocr-hindi = "ocr_hindi.cli:app"
 ocr-devnagari = "ocr_hindi.cli:app"
+ocr-hindi-ui = "ocr_hindi.app_launcher:main"
+ocr-ui = "ocr_hindi.app_launcher:main"
 
 [project.urls]
 Homepage = "https://github.com/rajeshkanaka/OCR-Devnagari"
 Repository = "https://github.com/rajeshkanaka/OCR-Devnagari"
 Issues = "https://github.com/rajeshkanaka/OCR-Devnagari/issues"
 Documentation = "https://github.com/rajeshkanaka/OCR-Devnagari#readme"
+Changelog = "https://github.com/rajeshkanaka/OCR-Devnagari/releases"
 
 [tool.hatch.build.targets.sdist]
 include = [

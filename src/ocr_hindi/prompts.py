@@ -1,6 +1,6 @@
-"""
-OCR Prompts optimized for Hindi/Sanskrit Tantric texts
-"""
+"""OCR Prompts optimized for Hindi/Sanskrit Tantric texts."""
+
+__all__ = ["OCR_PROMPT", "OCR_PROMPT_DETAILED", "OCR_PROMPT_FAST"]
 
 OCR_PROMPT = """Extract ALL text from this scanned page in proper Unicode Devanagari.
 
@@ -38,7 +38,6 @@ HANDLING UNCLEAR TEXT:
 TEXT TYPE: Tantric/spiritual manuscript with mantras and technical terminology.
 Accuracy of mantras is critical - preserve exact spelling."""
 
-# Simpler prompt for faster processing
 OCR_PROMPT_FAST = """Extract all Devanagari text from this page exactly as written.
 Keep verse numbers (॥१॥), punctuation (।॥), and line breaks.
 Output only the text, nothing else."""

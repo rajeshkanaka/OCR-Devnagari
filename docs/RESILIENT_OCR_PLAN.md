@@ -5,7 +5,7 @@
 > **Status**: 🟢 COMPLETE - All 6 Tasks Implemented
 > **Last Updated**: 2026-01-19
 > **Target Mode**: Hybrid (EasyOCR + Gemini) only
-> **Model**: `gemini-3-flash-preview`
+> **Model**: `gemini-2.0-flash`
 
 ---
 

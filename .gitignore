@@ -95,6 +95,13 @@ dmypy.json
 # OCR cache and progress files (user-specific)
 .ocr_cache_*/
 .ocr_progress_*.json
+*_unicode.md
+
+# OCR output directories
+ocr_*/
+
+# Search index databases
+_search_index.db
 
 # Log files
 *.log
@@ -108,3 +115,13 @@ dmypy.json
 
 # EasyOCR model cache (downloaded on first run)
 ~/.EasyOCR/
+
+# Sample/test PDFs and outputs (user-specific)
+src/*.pdf
+src/*.png
+src/*_unicode.md
+src/ocr_hindi/backends/gemini_backend.py
+user_prompt.md
+REVIEW_ROUND2.md
+REVIEW_ROUND1.md
+IMPROVEMENT_PLAN.md
