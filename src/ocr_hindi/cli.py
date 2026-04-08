@@ -6,6 +6,7 @@ Backends available:
 - marker: Open-source PDF to Markdown (FREE)
 - easyocr: Open-source OCR with Hindi support (FREE)
 - tesseract: Google's open-source OCR (FREE)
+- chandra: Chandra OCR 2 Vision-Language Model (FREE)
 - hybrid: EasyOCR + Gemini verification (90%+ savings)
 """
 
@@ -73,6 +74,12 @@ _ENGINE_INFO: dict[str, dict[str, str]] = {
         "badge": "[bold black on yellow] FREE [/bold black on yellow]",
         "desc": "Basic OCR",
     },
+    "chandra": {
+        "model": "Chandra OCR 2 (Local)",
+        "cost": "FREE",
+        "badge": "[bold black on yellow] FREE [/bold black on yellow]",
+        "desc": "Best for structured docs",
+    },
 }
 
 _VALID_ENGINES = tuple(_ENGINE_INFO.keys())
@@ -101,9 +108,7 @@ def _get_pdf_pages(pdf_path: Path) -> int:
         raise typer.Exit(1) from exc
 
 
-def _resolve_page_list(
-    pages: str | None, total_pages: int
-) -> list[int]:
+def _resolve_page_list(pages: str | None, total_pages: int) -> list[int]:
     """Resolve page specification to a list of page numbers.
 
     Prompts interactively if pages is None.
@@ -128,9 +133,7 @@ def _resolve_page_list(
         raise typer.Exit(1) from exc
 
 
-def _print_retry_hint(
-    pdf_path: Path, command: str, engine: str = ""
-) -> None:
+def _print_retry_hint(pdf_path: Path, command: str, engine: str = "") -> None:
     """Print hint for retrying failed pages.
 
     Args:
@@ -147,7 +150,7 @@ def _print_retry_hint(
         engine_flag = f" -e {engine}" if engine else ""
         console.print(
             f"\n[yellow]To retry failed pages:[/yellow]\n"
-            f'  python -m ocr_hindi {command} {pdf_path}'
+            f"  python -m ocr_hindi {command} {pdf_path}"
             f'{engine_flag} --pages "{failed_str}"'
         )
 
@@ -157,7 +160,8 @@ def _print_retry_hint(
 
 @app.callback()
 def main(
-    version: bool | None = typer.Option(
+    version: bool
+    | None = typer.Option(
         None,
         "--version",
         "-v",
@@ -203,9 +207,7 @@ def validate() -> None:
         deps_ok = False
 
     try:
-        subprocess.run(
-            ["pdftoppm", "-v"], capture_output=True, text=True, timeout=5
-        )
+        subprocess.run(["pdftoppm", "-v"], capture_output=True, text=True, timeout=5)
         console.print("  [green]\u2713[/green] poppler (pdftoppm)")
     except (subprocess.SubprocessError, FileNotFoundError):
         console.print(
@@ -244,7 +246,8 @@ def validate() -> None:
 @app.command()
 def process(
     pdf_path: Path = typer.Argument(..., help="Path to the PDF file", exists=True),
-    pages: str | None = typer.Option(
+    pages: str
+    | None = typer.Option(
         None, "--pages", "-p", help="Page range (e.g., 'all', '1-50', '1,5,10-20')"
     ),
     resume: bool = typer.Option(False, "--resume", "-r", help="Resume from previous progress"),
@@ -308,14 +311,17 @@ def process(
 @app.command()
 def fast(
     pdf_path: Path = typer.Argument(..., help="Path to the PDF file", exists=True),
-    pages: str | None = typer.Option(
+    pages: str
+    | None = typer.Option(
         None, "--pages", "-p", help="Page range (e.g., 'all', '1-50', '1,5,10-20')"
     ),
     resume: bool = typer.Option(False, "--resume", "-r", help="Resume from previous progress"),
     dry_run: bool = typer.Option(False, "--dry-run", "-n", help="Show what would be processed"),
     model: str = typer.Option("gemini-2.0-flash", "--model", "-m", help="Gemini model to use"),
     dpi: int = typer.Option(200, "--dpi", help="DPI for PDF to image conversion"),
-    workers: int = typer.Option(10, "--workers", "-w", help="Concurrent API workers (1-20)", min=1, max=20),
+    workers: int = typer.Option(
+        10, "--workers", "-w", help="Concurrent API workers (1-20)", min=1, max=20
+    ),
     rpm: int = typer.Option(60, "--rpm", help="Rate limit: requests per minute", min=10, max=120),
 ) -> None:
     """FAST: High-performance async OCR with concurrent workers.
@@ -346,9 +352,7 @@ def fast(
     estimated_minutes = len(page_list) / effective_rate
     console.print(f"  Estimated time: ~{estimated_minutes:.1f} minutes")
 
-    config = AsyncOCRConfig(
-        model=model, dpi=dpi, max_concurrent=workers, requests_per_minute=rpm
-    )
+    config = AsyncOCRConfig(model=model, dpi=dpi, max_concurrent=workers, requests_per_minute=rpm)
     processor = AsyncOCRProcessor(config=config)
 
     console.print("\n[bold]Validating authentication...[/bold]")
@@ -362,18 +366,14 @@ def fast(
     console.print(f"  [green]\u2713[/green] {auth_method}: {message}")
 
     def handle_interrupt(signum, frame):
-        console.print(
-            "\n[yellow]Interrupt received, shutting down gracefully...[/yellow]"
-        )
+        console.print("\n[yellow]Interrupt received, shutting down gracefully...[/yellow]")
         processor.request_shutdown()
 
     signal.signal(signal.SIGINT, handle_interrupt)
 
     try:
         successful, failed, output_path = asyncio.run(
-            processor.process_pdf(
-                pdf_path, page_list, resume=resume, dry_run=dry_run
-            )
+            processor.process_pdf(pdf_path, page_list, resume=resume, dry_run=dry_run)
         )
 
         if not dry_run:
@@ -402,10 +402,16 @@ def ocr(
     engine: str = typer.Option("hybrid", "--engine", "-e", help="OCR engine"),
     resume: bool = typer.Option(False, "--resume", "-r", help="Resume from previous progress"),
     dry_run: bool = typer.Option(False, "--dry-run", "-n", help="Show what would be processed"),
-    confidence: float = typer.Option(0.85, "--confidence", "-c", help="Confidence threshold", min=0.0, max=1.0),
-    verify_mantras: bool = typer.Option(True, "--verify-mantras/--no-verify-mantras", help="Verify mantras with Gemini"),
+    confidence: float = typer.Option(
+        0.85, "--confidence", "-c", help="Confidence threshold", min=0.0, max=1.0
+    ),
+    verify_mantras: bool = typer.Option(
+        True, "--verify-mantras/--no-verify-mantras", help="Verify mantras with Gemini"
+    ),
     dpi: int = typer.Option(200, "--dpi", help="DPI for PDF to image conversion"),
-    workers: int = typer.Option(5, "--workers", "-w", help="Concurrent workers (1-20)", min=1, max=20),
+    workers: int = typer.Option(
+        5, "--workers", "-w", help="Concurrent workers (1-20)", min=1, max=20
+    ),
     batch: bool = typer.Option(False, "--batch", help="Use Vertex AI Batch API (50% savings)"),
     gcs_bucket: str | None = typer.Option(None, "--gcs-bucket", help="GCS bucket for batch API"),
     output_dir: Path | None = typer.Option(None, "--output-dir", "-o", help="Output directory"),
@@ -421,6 +427,8 @@ def ocr(
     - marker: FREE local PDF to Markdown conversion.
 
     - tesseract: FREE Google's open-source OCR engine.
+
+    - chandra: FREE local Vision-Language Model. Best for structured docs.
 
     - gemini: Original Gemini Vision API (expensive but accurate).
 
@@ -442,8 +450,7 @@ def ocr(
     console.print()
     console.print(
         Panel(
-            f"[bold white]{pdf_path.name}[/bold white]\n"
-            f"[dim]Pages: {total_pages}[/dim]",
+            f"[bold white]{pdf_path.name}[/bold white]\n" f"[dim]Pages: {total_pages}[/dim]",
             title="[bold cyan]OCR Hindi[/bold cyan]",
             subtitle=info["badge"],
             border_style="cyan",
@@ -461,9 +468,7 @@ def ocr(
     console.print(config_table)
 
     page_list = _resolve_page_list(pages, total_pages)
-    console.print(
-        f"[dim]Processing {len(page_list)} of {total_pages} pages...[/dim]"
-    )
+    console.print(f"[dim]Processing {len(page_list)} of {total_pages} pages...[/dim]")
 
     # Batch API mode
     if batch:
@@ -490,14 +495,20 @@ def ocr(
         if workers > 1 and engine_lower != "marker":
             successful, failed, output_path = asyncio.run(
                 processor.process_pdf_async(
-                    pdf_path, page_list,
-                    resume=resume, dry_run=dry_run, output_dir=output_dir,
+                    pdf_path,
+                    page_list,
+                    resume=resume,
+                    dry_run=dry_run,
+                    output_dir=output_dir,
                 )
             )
         else:
             successful, failed, output_path = processor.process_pdf(
-                pdf_path, page_list,
-                resume=resume, dry_run=dry_run, output_dir=output_dir,
+                pdf_path,
+                page_list,
+                resume=resume,
+                dry_run=dry_run,
+                output_dir=output_dir,
             )
 
         if not dry_run:
@@ -596,9 +607,7 @@ def _run_batch(
             "duration_seconds": result.duration_seconds,
         }
         meta_file = batch_output_dir / "metadata.json"
-        meta_file.write_text(
-            json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
+        meta_file.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 
         output_display: Path | str = output_file
     else:
@@ -626,23 +635,39 @@ def engines() -> None:
     table.add_column("Best For", style="white")
 
     table.add_row(
-        "hybrid (default)", "~$1/1000 pages", "High",
+        "hybrid (default)",
+        "~$1/1000 pages",
+        "High",
         "Best balance of cost and accuracy. Uses EasyOCR + Gemini verification.",
     )
     table.add_row(
-        "easyocr", "FREE", "Good",
+        "easyocr",
+        "FREE",
+        "Good",
         "Local processing, good Hindi support. No API costs.",
     )
     table.add_row(
-        "marker", "FREE", "Very Good",
+        "marker",
+        "FREE",
+        "Very Good",
         "Structured documents, books. Native Markdown output.",
     )
     table.add_row(
-        "tesseract", "FREE", "Moderate",
+        "tesseract",
+        "FREE",
+        "Moderate",
         "Simple documents. Requires system install.",
     )
     table.add_row(
-        "gemini", "~$10/1000 pages", "Excellent",
+        "chandra",
+        "FREE",
+        "Very Good",
+        "Structured documents, tables, layout preservation. Local VLM.",
+    )
+    table.add_row(
+        "gemini",
+        "~$10/1000 pages",
+        "Excellent",
         "Complex manuscripts, when accuracy is critical.",
     )
 
@@ -719,16 +744,13 @@ def benchmark(
         start = time_mod.monotonic()
 
         try:
-            successful, _, _ = asyncio.run(
-                proc.process_pdf(pdf_path, test_pages, resume=False)
-            )
+            successful, _, _ = asyncio.run(proc.process_pdf(pdf_path, test_pages, resume=False))
             elapsed = time_mod.monotonic() - start
             pages_per_min = (successful / elapsed) * 60
 
             results.append((worker_count, elapsed, pages_per_min))
             console.print(
-                f"  {successful} pages in {elapsed:.1f}s "
-                f"({pages_per_min:.1f} pages/min)"
+                f"  {successful} pages in {elapsed:.1f}s " f"({pages_per_min:.1f} pages/min)"
             )
         except Exception as exc:
             console.print(f"  [red]Error: {exc}[/red]")
@@ -746,13 +768,10 @@ def benchmark(
 
     if results:
         best = max(results, key=lambda x: x[2])
-        console.print(
-            f"\n[green]Optimal: {best[0]} workers ({best[2]:.1f} pages/min)[/green]"
-        )
+        console.print(f"\n[green]Optimal: {best[0]} workers ({best[2]:.1f} pages/min)[/green]")
         full_time = total_pages / best[2]
         console.print(
-            f"Estimated time for {total_pages} pages: "
-            f"{format_duration(full_time * 60)}"
+            f"Estimated time for {total_pages} pages: " f"{format_duration(full_time * 60)}"
         )
 
 
@@ -821,9 +840,7 @@ def reindex(
 
     index = SearchIndex(folder)
 
-    console.print(
-        f"[bold]{'Rebuilding' if force else 'Building'} search index...[/bold]"
-    )
+    console.print(f"[bold]{'Rebuilding' if force else 'Building'} search index...[/bold]")
     console.print(f"  Folder: {folder}")
 
     pages_indexed = index.build(force=force)

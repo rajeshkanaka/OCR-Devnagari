@@ -124,6 +124,10 @@ class HybridBackend(OCRBackend):
                 from .tesseract_backend import TesseractBackend
 
                 self._primary = TesseractBackend(config=self.config)
+            elif self.primary_backend_type == "chandra":
+                from .chandra_backend import ChandraBackend
+
+                self._primary = ChandraBackend(config=self.config)
             else:
                 return False, f"Unknown primary backend: {self.primary_backend_type}"
 
@@ -206,17 +210,13 @@ class HybridBackend(OCRBackend):
 
             if gemini_result.success:
                 gemini_result.duration = time.time() - start_time
-                gemini_result.backend_used = (
-                    f"{self.name}:{self.primary_backend_type}+gemini"
-                )
+                gemini_result.backend_used = f"{self.name}:{self.primary_backend_type}+gemini"
                 self._stats["gemini_verified"] += 1
                 self._stats["total_duration"] += gemini_result.duration
                 return gemini_result
 
             # Gemini failed — fall back to primary result
-            primary_result.backend_used = (
-                f"{self.name}:{self.primary_backend_type}-fallback"
-            )
+            primary_result.backend_used = f"{self.name}:{self.primary_backend_type}-fallback"
             self._stats["total_duration"] += time.time() - start_time
             return primary_result
 
@@ -247,12 +247,8 @@ class HybridBackend(OCRBackend):
         stats = self._stats.copy()
 
         if stats["total_pages"] > 0:
-            stats["primary_only_pct"] = (
-                stats["primary_only"] / stats["total_pages"] * 100
-            )
-            stats["gemini_verified_pct"] = (
-                stats["gemini_verified"] / stats["total_pages"] * 100
-            )
+            stats["primary_only_pct"] = stats["primary_only"] / stats["total_pages"] * 100
+            stats["gemini_verified_pct"] = stats["gemini_verified"] / stats["total_pages"] * 100
             stats["estimated_savings_pct"] = stats["primary_only_pct"]
 
         self._sync_token_usage()
@@ -275,16 +271,12 @@ class HybridBackend(OCRBackend):
 
         console.print()
 
-        stats_table = Table(
-            box=box.ROUNDED, show_header=False, border_style="cyan"
-        )
+        stats_table = Table(box=box.ROUNDED, show_header=False, border_style="cyan")
         stats_table.add_column("Metric", style="dim", width=24)
         stats_table.add_column("Value", style="bold", width=20)
         stats_table.add_column("Detail", style="dim", width=20)
 
-        stats_table.add_row(
-            "Model", self.gemini_model, f"thinking: {self.thinking_level}"
-        )
+        stats_table.add_row("Model", self.gemini_model, f"thinking: {self.thinking_level}")
         stats_table.add_row("", "", "")
 
         primary_pct = stats.get("primary_only_pct", 0)
