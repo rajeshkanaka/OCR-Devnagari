@@ -66,7 +66,7 @@ streamlit = [
     "streamlit>=1.28.0",
 ]
 batch = [
-    "google-cloud-storage>=2.10.0",
+    "google-cloud-storage>=3.10.1",
     "google-cloud-aiplatform>=1.38.0",
 ]
 all = [
@@ -74,7 +74,7 @@ all = [
     "numpy>=1.24.0",
     "pytesseract>=0.3.10",
     "streamlit>=1.28.0",
-    "google-cloud-storage>=2.10.0",
+    "google-cloud-storage>=3.10.1",
     "google-cloud-aiplatform>=1.38.0",
 ]
 dev = [
