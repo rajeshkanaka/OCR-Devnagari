@@ -167,16 +167,21 @@ class ChandraBackend(OCRBackend):
 
     def cleanup(self) -> None:
         """Free model memory and GPU resources."""
+        self._initialized = False
         if self._manager is not None:
             del self._manager
             self._manager = None
-            self._initialized = False
             try:
                 import torch
 
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
-                elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+                elif (
+                    hasattr(torch.backends, "mps")
+                    and torch.backends.mps.is_available()
+                    and hasattr(torch, "mps")
+                    and hasattr(torch.mps, "empty_cache")
+                ):
                     torch.mps.empty_cache()
             except ImportError:
                 pass
