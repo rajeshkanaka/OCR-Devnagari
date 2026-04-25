@@ -6,10 +6,12 @@ Available backends:
 - marker: Open-source PDF to Markdown (FREE, runs locally)
 - easyocr: Open-source OCR with Hindi support (FREE, runs locally)
 - tesseract: Google's open-source OCR (FREE, runs locally)
+- chandra: Vision-language model, 90+ languages (FREE, runs locally)
 - hybrid: EasyOCR + Gemini for low-confidence pages (90%+ cost savings)
 """
 
 from .base import BackendConfig, BackendType, OCRBackend, OCRResult
+from .chandra_backend import ChandraBackend
 from .easyocr_backend import EasyOCRBackend
 from .gemini_backend import GeminiBackend, TokenUsage
 from .hybrid_backend import HybridBackend
@@ -20,6 +22,7 @@ from .tesseract_backend import TesseractBackend
 __all__ = [
     "BackendConfig",
     "BackendType",
+    "ChandraBackend",
     "EasyOCRBackend",
     "GeminiBackend",
     "HybridBackend",
@@ -38,6 +41,7 @@ _BACKEND_MAP: dict[str, type[OCRBackend]] = {
     "marker": MarkerBackend,
     "easyocr": EasyOCRBackend,
     "tesseract": TesseractBackend,
+    "chandra": ChandraBackend,
     "hybrid": HybridBackend,
 }
 
@@ -46,7 +50,7 @@ def get_backend(backend_type: str, **kwargs) -> OCRBackend:
     """Factory function to get the appropriate OCR backend.
 
     Args:
-        backend_type: One of 'gemini', 'marker', 'easyocr', 'tesseract', 'hybrid'.
+        backend_type: One of 'gemini', 'marker', 'easyocr', 'tesseract', 'chandra', 'hybrid'.
         **kwargs: Backend-specific configuration options.
 
     Returns:
@@ -60,8 +64,6 @@ def get_backend(backend_type: str, **kwargs) -> OCRBackend:
 
     if cls is None:
         available = ", ".join(sorted(_BACKEND_MAP))
-        raise ValueError(
-            f"Unknown backend: {backend_type}. Available: {available}"
-        )
+        raise ValueError(f"Unknown backend: {backend_type}. Available: {available}")
 
     return cls(**kwargs)

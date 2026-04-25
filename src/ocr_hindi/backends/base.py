@@ -11,8 +11,8 @@ from PIL import Image
 
 # Shared mantra patterns used across all backends for consistency
 MANTRA_PATTERNS: tuple[str, ...] = (
-    "\u0965",       # ॥ double danda
-    "\u0950",       # ॐ Om
+    "\u0965",  # ॥ double danda
+    "\u0950",  # ॐ Om
     "\u0938\u094d\u0935\u093e\u0939\u093e",  # स्वाहा
     "\u0928\u092e\u0903",  # नमः
     "\u092b\u091f\u094d",  # फट्
@@ -32,6 +32,7 @@ class BackendType(Enum):
     EASYOCR = "easyocr"
     TESSERACT = "tesseract"
     HYBRID = "hybrid"
+    CHANDRA = "chandra"
 
 
 @dataclass
@@ -105,9 +106,7 @@ class OCRBackend(ABC):
             OCRResult with extracted text and metadata.
         """
 
-    def process_pdf_page(
-        self, pdf_path: Path, page_num: int, dpi: int = 200
-    ) -> OCRResult:
+    def process_pdf_page(self, pdf_path: Path, page_num: int, dpi: int = 200) -> OCRResult:
         """Process a single PDF page.
 
         Args:
