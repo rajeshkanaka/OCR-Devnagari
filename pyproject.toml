@@ -46,7 +46,7 @@ dependencies = [
     "google-genai>=1.0.0",
     "pdf2image>=1.16.0",
     "python-dotenv>=1.0.0",
-    "typer>=0.9.0",
+    "typer>=0.24.1",
     "rich>=13.0.0",
     "pillow>=10.0.0",
 ]
